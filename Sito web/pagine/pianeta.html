@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="it">  <!-- Lingua italiana -->
+<head>
+    
+    <meta charset="UTF-8">  <!-- Settaggio della codifica dei caratteri -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Project Work/Per il pianeta</title> <!-- Titolo della pagina -->
+
+    <!-- Font Awesome 6 per le icone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Style della pagina -->
+    <link rel="stylesheet" href="../stile/pianetastyle.css">
+
+    <!-- Google Fonts per gli stili di scrittura -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+    </style>
+
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="bg-white py-4">     <!-- Ho impostato il bianco come colore di background -->
+        <div class="container text-center">
+
+            <!-- Logo con redirect alla homepage -->
+            <div class="text-center mb-3">
+                <a href="../index.html">
+                    <img src="../immagini/logo2.jpg" alt="Logo Caffè Borbone" class="img-fluid" style="max-height: 150px;">
+                </a>
+            </div>
+
+            <!-- Menu Navigazione -->
+            <!-- Menu responsive caratterizzato da una lista visibile per computer, mentre diventa a "tendina" per dispositivi mobile -->
+            <!-- La lista è disposta orizzontalmente per pc e verticalmente per mobile -->
+            <!-- Inoltre una volta che è "collassata" la lista apparirà l'icona del menu hamburger -->
+            <nav class="navbar navbar-expand-lg justify-content-center">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="chisiamo.html">Chi siamo</a>     <!-- Redirect alla pagina dedicata -->
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="storia.html">La nostra storia</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="sostenibilita.html">Sostenibilità</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="#contatti">Contatti</a>     <!-- Indirizza alla sezione contatti della pagina corrente -->
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+        <!-- INTRO -->
+        <section class="intro sezioni-imgsfondo d-flex justify-content-center align-items-center text-center">
+            <div class="intro-container">
+                <div class="row">
+                    <div class="col intro-col">
+                        <h2>85%</h2>
+                        <p>di materie prime rinnovabili.</p>
+                    </div>
+
+                    <div class="col intro-col">
+                        <h2>81%</h2>
+                        <p>di materiali rinnovabili utilizzati per il packaging.</p>
+                    </div>
+
+                    <div class="col intro-col">
+                        <h2>58%</h2>
+                        <p>di materiali riciclati utilizzati per il packaging</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- MAIN -->
+    <main>
+
+        <!-- SEZIONE CIALDE E CAPSULE -->
+        <!-- Sezione caratterizzata da 2 blocchi, ciascun blocco costituito da un'immagine e sotto un piccola porzione di testo -->
+        <section class="py-5 cialde">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-md-6 text-center animazione-slide">     <!-- Impostazioni responsive Bootstrap -->
+                        <img src="../immagini/cialda.webp" class="img-fluid rounded mb-3">
+                        <p>Siamo stati la prima azienda a realizzare una cialda filtro carta completamente compostabile,
+                           certificata CIC (Consorzio Italiano Compostatori), che, se smaltita nell'umido, può essere utilizzata
+                           per la produzione di compost, adatto ad arricchire con elementi vitali i terreni.</p>
+                    </div>
+
+                    <div class="col-md-6 text-center animazione-slide">
+                        <img src="../immagini/capsula.jpg" class="img-fluid rounded mb-3">
+                        <p>La nostra linea di capsule compostabili compatibili con Lavazza® a Modo Mio®* è realizzata in biopolimero,
+                            con top in carta filtro, per un'estrazione del caffè ancora più naturale.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEZIONE ENERGIA -->
+        <!-- Sezione caratterizzata da un'immagine di background e da una descrizione -->
+        <section class="energia sezioni-imgsfondo text-center">
+
+            <div class="energia-container">
+                <h2>La nostra energia cambia le cose. <br>In meglio.</h2>
+                <p>Dal 2022, nella nostra sede di Caivano, utilizziamo <strong>solamente energia elettrica rinnovabile</strong>
+                   grazie a due impianti fotovoltaici, <br>
+                   dove il più grande (500kW) è in grado, da solo, di produrre il 15% del fabbisogno di energia elettrica. <br>
+                   Ma non è tutto! Abbiamo, inoltre, un impianto fotovoltaico (da 1000kW) in una nuova area del nostro stabilimento interamente
+                   dedicato <strong>all'autoconsumo</strong>.
+                </p>
+            </div>
+        </section>
+
+        <!-- SEZIONE CIRCOLARITÀ -->
+        <!-- Sezione caratterizzata da un testo, che a sua volta contiene una lista per elencare i materiali recuperati, ed affiancato da un'immagine -->
+        <section class="py-5 circolarita">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-md-6 animazione-slide">
+                        <h2>Il nostro è un caffè "circolare"? Ovviamente!</h2>
+                        <p>
+                           Infatti <i></i>l nostro reparto di torrefazione lavora il caffè crudo per produrre circa
+                           <strong>30.000 tonnellate di caffè</strong> ogni anno. <br>
+                           Oltre al caffè destinato al consumo, dal caffè crudo recuperiamo le <strong>silverskin</strong>, ossia le pellicole che avvolgono
+                           il chicco di caffè e le polveri di sottovaglio, una risorsa destinata alla <strong>produzione di compost o concime</strong>,
+                           e i <strong>sacchi di juta</strong> ceduti ed utilizzati in agricoltura per la pacciamatura. <br>
+                           Nello specifico, ogni anno vengono recuperati e destinati a nuovi usi circa:
+                           <ul>
+                               <li>400 tonnellate di silverskin;</li>
+                               <li>400 tonnellate di sacchi di juta;</li>
+                               <li>70 tonnellate di scarti di alluminio;</li>
+                               <li>600 tonnellate di carta e cartone;</li>
+                               <li>170 tonnellate di imballaggi di plastica.</li>
+                           </ul>
+                        </p>
+                    </div>
+
+                    <div class="col-md-6 animazione-slide">
+                        <img src="../immagini/circolare.jpg" class="img-fluid rounded">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEZIONE RICICLO -->
+        <!-- Sezione caratterizzata da 6 cards, disposte in 2 righe e 3 colonne-->
+        <!-- Ciascuna card è composta da un'immagine nella parte superiore, un titolo ed una breve descrizione -->
+        <section class="py-5 bg-green">     <!-- Ho impostato il verde come colore di background -->
+            <div class="container">
+                <h2 class="text-center mb-4 animazione-slide">Scopri come riciclare i nostri prodotti!</h2>
+
+                <div class="row g-4">
+                    
+                    <div class="col-md-4 animazione-slide">
+                        <div class="card shadow-sm">
+                            <img src="../immagini/riciclo/card1.jpg" class="card-img-top">
+                            <div class="card-body text-center">
+                                <h3>Cialde</h3>
+                                <p>Ogni cialda Caffè Borbone può essere smaltita, dopo l'utilizzo, direttamente nell'umido, così com'è.
+                                   La cialda ha la certificazione CIC, una garanzia di qualità che si basa sul principio di idoneità
+                                   alla compostabilità.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 animazione-slide">
+                        <div class="card shadow-sm">
+                            <img src="../immagini/riciclo/card2.jpg" class="card-img-top">
+                            <div class="card-body text-center">
+                                <h3>Bustina monodose</h3>
+                                <p>La bustina monodose delle cialde Caffè Borbone può essere smaltita nella carta, mentre la bustina che contiene
+                                    le capsule è riciclabile nella plastica, così come il sacchetto del caffè macinato.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 animazione-slide">
+                        <div class="card shadow-sm">
+                            <img src="../immagini/riciclo/card3.jpg" class="card-img-top">
+                            <div class="card-body text-center">
+                                <h3>Capsule compatibili</h3>
+                                <p>Prima di smaltire correttamente le capsule (a seconda del materiale con cui sono fatte, come plastica e alluminio)
+                                    ricordati sempre di rimuovere il caffè contenuto all'interno e di smaltirlo nell'umido.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 animazione-slide">
+                        <div class="card shadow-sm">
+                            <img src="../immagini/riciclo/card4.jpg" class="card-img-top">
+                            <div class="card-body text-center">
+                                <h3>Capsule compostabili</h3>
+                                <p>Le capsule compostabili compatibili con il sistema Lavazza® a Modo Mio®* sono realizzate con un apposito biopolimero
+                                    che presenta un'elevata biodegradabilità e un top in carta filtro; e proprio per questo possono essere gettate nell'umido.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 animazione-slide">
+                        <div class="card shadow-sm">
+                            <img src="../immagini/riciclo/card5.jpg" class="card-img-top">
+                            <div class="card-body text-center">
+                                <h3>Scatola esterna</h3>
+                                <p>La scatola esterna di tutti i nostri prodotti è totalmente smaltibile nella carta. Infatti,
+                                   la carta e il cartone che utilizziamo per produrre le confezioni esterne sono certificati FSC,
+                                   garantendo almeno il 70% di materiali provenienti da foreste gestite in modo responsabile o da materiali riciclati.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 animazione-slide">
+                        <div class="card shadow-sm">
+                            <img src="../immagini/riciclo/card6.jpg" class="card-img-top">
+                            <div class="card-body text-center">
+                                <h3>Kit accessori</h3>
+                                <p>Il kit è composto da bicchierini riciclabili nella carta e da palette in legno di betulla
+                                   biodegradabili, smaltibili nell'umido. </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+
+        <!-- Contatti -->
+        <p>
+            <a href="tel:+39123456789" id="contatti" class="link-contatti">     <!-- Redirect -->
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>     <!-- Icona contatti -->
+                <span class="contatti-text">+39 123 456 789</span>
+            </a>
+        </p>
+
+        <p>
+            <a href="mailto:info@example.com" class="link-contatti">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                <span class="contatti-text">info@example.com</span>
+            </a>
+        </p>
+
+        <!-- Social -->
+        <p>Ci trovi anche su:</p>
+
+        <div class="icone-social mb-4">
+            <a href="https://facebook.com" target="_blank" class="social-link">   <!-- Redirect alla pagina interessata con l'apertura di una nuova scheda -->
+                <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>     <!-- Icona social -->
+            </a>
+            <a href="https://instagram.com" target="_blank" class="social-link">
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="social-link">
+                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="social-link">
+                <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="https://youtube.com" target="_blank" class="social-link">
+                <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <p class="copyright">
+            © 2025 - Caffè Borbone Srl. Tutti i diritti riservati.
+        </p>
+
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS per animazioni fade-in -->
+     <script src="../script.js"></script>
+
+</body>
+</html>

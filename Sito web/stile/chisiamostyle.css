@@ -1,0 +1,175 @@
+/* ===== STRUTTURA BASE ===== */
+body {
+    font-family: "Lato", sans-serif;     /* Stile scrittura */
+    margin: 0;
+    background-color: red;
+    color: white;
+}
+
+/* Logo */
+.logo {
+    width: 150px;     /* Larghezza logo */
+}
+
+/* ===== MENU NAVIGAZIONE ===== */
+.navbar-nav .nav-link {
+    color: red;     /* Colore del testo dei link di navigazione */
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #0d6efd;     /* Colore al passaggio del mouse */
+    text-decoration: underline;     /* Sottolineatura al passaggio del mouse */
+}
+
+.navbar-toggler {
+    color: red;     /* Colore del bordo del menu a tendina */
+}
+
+/* ===== INTRO ===== */
+.intro img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;     /* Adatta l'immagine senza distorsioni */
+}
+
+/* ===== MAIN ===== */
+.sezioni {
+    padding: 2rem 1.25rem;
+}
+
+.sezioni h1 {
+    font-family: "Cinzel", serif;     /* Stile titolo */
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.sezioni p,
+.sezioni ul li {
+    font-size: 0.95rem;     /* Grandezza testo */
+    line-height: 1.6;
+}
+
+.sezioni ul {
+    padding-left: 1.2rem;     /* Spazio della lista */
+}
+
+.sezioni p strong {
+    font-style: italic;     /* Stile per parole in grassetto */
+}
+
+/* Immagini contenuti */
+.sezioni img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 0.5rem;     /* Bordi leggermente arrotondati */
+}
+
+/* ===== ANIMAZIONI FADE-IN ===== */
+.animazione-slide {
+    opacity: 0;     /* Inizialmente nascosto */
+    transform: translateY(30px);     /* Parte un pò più in basso */
+    transition: opacity 1s ease-out, transform 1s ease-out;     /* Transizione dolce */
+}
+
+.animazione-slide.visible {
+    opacity: 1;     /* Diventa visibile */
+    transform: translateY(0);     /* Torna alla posizione originale */
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: white;
+    color: red;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* Contatti */
+footer p {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+/* Link contatti */
+.link-contatti {
+    text-decoration: none;
+    color: red; 
+    transition: color 0.3s ease;
+    display: inline-flex;     /* Allinea icona e testo orizzontalmente */
+    align-items: center;
+}
+
+.link-contatti .contatti-text:hover {
+    text-decoration: underline;     /* Sottolinea al passaggio del mouse */
+    color: rgb(62, 255, 14);     /* Verde solo al passaggio del mouse */
+}
+
+.link-contatti .contatti-text {
+    margin-left: 0.5rem;     /* Spazio tra icona e testo */
+}
+
+/* Icone social */
+.icone-social {
+    margin: 1rem 0;
+}
+
+.icone-social a {
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.social-link i {
+    display: inline-block;
+    line-height: 1;
+    font-size: 1.6rem;
+    color: red;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-link i:hover {
+    color: #0d6efd;
+    transform: translateY(-3px);
+}
+
+/* Copyright */
+footer .copyright {
+    font-size: 0.95rem;
+    margin-top: 1rem;
+}
+
+/* ===== MEDIA QUERIES ===== */
+@media (min-width: 768px) {
+    .intro img {
+        max-height: 600px;
+    }
+
+    .sezioni {
+        padding: 3rem;
+    }
+
+    .sezioni p,
+    .sezioni ul li {
+        font-size: 1rem;
+    }
+
+    .sezioni img {
+        max-height: 300px;
+    }
+}
+
+@media (min-width: 992px) {
+    .intro img {
+        max-height: 850px;
+    }
+
+    .sezioni p,
+    .sezioni ul li {
+        font-size: 1.1rem;
+    }
+
+    .sezioni img {
+        max-height: 350px;
+    }
+}

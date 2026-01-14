@@ -1,0 +1,172 @@
+/* ===== STRUTTURA BASE ===== */
+body {
+    font-family: Lato, sans-serif;     /* Stile scrittura */
+    margin: 0;
+    background-color: lightgray;
+    color: #333;
+}
+
+/* Logo */
+.logo {
+    width: 150px;     /* Larghezza logo */
+}
+
+/* ===== MENU NAVIGAZIONE ===== */
+.navbar-nav .nav-link {
+    color: #333;     /* Colore del testo dei link di navigazione */
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #0d6efd;     /* Colore al passaggio del mouse */
+    text-decoration: underline;
+}
+
+.navbar-toggler {
+    color: #333;     /* Colore del bordo del menu a tendina */
+}
+
+/* ===== INTRO ===== */
+.intro img {
+    width: 100%;
+    max-height: 850px;
+    object-fit: cover;     /* Adatta l'immagine senza distorsioni */
+}
+
+/* ===== MAIN ===== */
+.wrapper {
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 8px;     /* Bordi leggermente arrotondati */
+}
+
+.wrapper h1 {
+    font-family: cinzel, sans-serif;     /* Stile titolo */
+    font-weight: 700;
+}
+
+.wrapper p {
+    font-size: 1.1rem;     /* Grandezza testo */
+    line-height: 1.6;
+}
+
+.wrapper strong {
+    font-style: italic;     /* Stile per parole in grassetto */
+}
+
+.wrapper img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+}
+
+/* ===== ANIMAZIONI FADE-IN ===== */
+.animazione-slide {
+    opacity: 0;     /* Inizialmente nascosto */
+    transform: translateY(30px);     /* Parte un pò più in basso */
+    transition: opacity 1s ease-out, transform 1s ease-out;     /* Transizione dolce */
+}
+
+.animazione-slide.visible {
+    opacity: 1;     /* Diventa visibile */
+    transform: translateY(0);     /* Torna alla posizione originale */
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: white;
+    color: #333;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* Contatti */
+footer p {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+/* Link contatti (telefono, email) */
+.link-contatti {
+    text-decoration: none;
+    color: #333; 
+    transition: color 0.3s ease;
+    display: inline-flex;     /* Per allineare icona e testo */
+    align-items: center;
+}
+
+.link-contatti .contatti-text:hover {
+    text-decoration: underline;     /* Sottolineato quando il cursore ci passa sopra */
+    color: rgb(62, 255, 14);     /* Verde solo al passaggio del mouse */
+}
+
+.link-contatti .contatti-text {
+    margin-left: 0.5rem;     /* Spazio tra icona e testo */
+}
+
+/* Icone social */
+.icone-social {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.icone-social a {
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.social-link i {
+    display: inline-block;                
+    line-height: 1;
+    font-size: 1.6rem;
+    color: #333;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-link i:hover {
+    color: #0d6efd;
+    transform: translateY(-3px);
+}
+
+/* Copyright */
+footer .copyright {
+    font-size: 0.95rem;
+    margin-top: 1rem;
+}
+
+/* ===== MEDIA QUERIES ===== */
+@media (max-width: 992px) {
+    .wrapper {
+        padding: 3rem;
+    }
+    
+    .wrapper p {
+        font-size: 1rem;
+    }
+    
+    .intro img {
+        max-height: 600px;
+    }
+    
+    .wrapper img {
+        max-height: 300px;
+    }
+}
+
+@media (max-width: 576px) {
+    .wrapper {
+        padding: 2rem;
+    }
+    
+    .wrapper p {
+        font-size: 0.95rem;
+    }
+    
+    .intro img {
+        max-height: 400px;
+    }
+    
+    .wrapper img {
+        max-height: 200px;
+    }
+}

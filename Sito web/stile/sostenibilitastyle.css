@@ -1,0 +1,245 @@
+/* ===== STRUTTURA BASE ===== */
+body {
+    font-family: Lato, sans-serif;     /* Stile scrittura */
+    margin: 0;
+    color: gold;
+}
+
+.sezioni {
+    background-color: gold;
+    color: white;
+    padding: 60px 0;     /* Spaziatura */
+}
+
+h2 {
+    font-family: cinzel, serif;     /* Stile scrittura dei titoli */
+    font-weight: 600;
+}
+
+/* Logo */
+.logo {
+    width: 150px;     /* Larghezza logo */
+}
+
+/* ===== MENU NAVIGAZIONE ===== */
+.navbar-nav .nav-link {
+    color: gold;     /* Colore del testo dei link di navigazione */
+    font-weight: bold;     /* Grassetto */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #0d6efd;     /* Colore al passaggio del mouse */
+    text-decoration: underline;     /* Testo sottolineato */
+}
+
+.navbar-toggler {
+    color: gold;     /* Colore del bordo del menu a tendina */
+}
+
+/* ===== SEZIONE HERO ===== */
+.hero {
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+
+.hero-img {
+    min-height: 350px;     /* Altezza immagine */
+}
+
+.hero-text p {
+    font-size: 1.2rem;     /* Dimensione testo */
+}
+
+.hero-text p strong {
+    font-style: italic;     /*Stile delle parole in grassetto */
+}
+
+/* ===== SEZIONE COMUNITA ===== */
+.comunita {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.comunita p {
+    font-size: 1.2rem;
+}
+
+.comunita p strong {
+    font-style: italic;
+}
+
+.comunita img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;     /* Bordi leggermente arrotondati */
+    object-fit: cover;
+}
+
+/* ===== SEZIONE CERTIFICAZIONI ===== */
+.certificazioni h2 {
+    color: gold;
+    font-weight: bold;
+}
+
+.cert-card {
+    background-color: white;
+    color: gold;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+}
+
+.cert-card img {
+    margin-bottom: 10px;
+}
+
+.cert-card:hover {
+    transform: translateY(-5px);     /* Le cards si spostano leggermente verso l'alto quando il cursore ci passa sopra */
+}
+
+/* ===== ANIMAZIONI FADE-IN ===== */
+.animazione-slide {
+    opacity: 0;     /* Inizialmente nascosto */
+    transform: translateY(30px);     /* Parte un pò più in basso */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.animazione-slide.visible {
+    opacity: 1;     /* Diventa visibile */
+    transform: translateY(0);     /* Torna alla posizione originale */
+}
+
+/* ===== ANIMAZIONI CERTIFICAZIONI ===== */
+
+/* Stato iniziale cards */
+.certificazioni, .cert-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Stato visibile cards */
+.certificazioni.visible, .cert-card {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== SEZIONE REPORT ===== */
+.report-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 1.5rem;
+    transition: color 0.2s, transform 0.2s;
+}
+
+/* Icona PDF */
+.report-link i {
+    font-size: 1.3rem;
+    color: white; 
+    margin-right: 8px;
+    transition: transform 0.2s;
+}
+
+.report-link:hover {
+    color: #0d6efd;     /* Colore al passaggio del mouse */
+    text-decoration: underline;
+}
+
+.report-link:hover i {
+    color: #0d6efd;
+    transform: scale(1.2);     /* Leggero ingrandimento icona */
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: white;
+    color: gold;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* Contatti */
+footer p {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+/* Link contatti (telefono, email) */
+.link-contatti {
+    text-decoration: none;
+    color: gold; 
+    transition: color 0.3s ease;
+    display: inline-flex;       /* Per allineare icona e testo */
+    align-items: center;
+}
+
+.link-contatti .contatti-text:hover {
+    text-decoration: underline;
+    color: #0d6efd;     /* Blu solo al passaggio del mouse */
+}
+
+.link-contatti .contatti-text {
+    margin-left: 0.5rem;     /* Spazio tra icona e testo */
+}
+
+/* Icone social */
+.icone-social {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.icone-social a {
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.social-link i {
+    display: inline-block;
+    line-height: 1;
+    font-size: 1.6rem;
+    color: gold;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-link i:hover {
+    color: #0d6efd;
+    transform: translateY(-3px);
+}
+
+/* Copyright */
+footer .copyright {
+    font-size: 0.95rem;
+    margin-top: 1rem;
+}
+
+/* ===== MEDIA QUERIES ===== */
+@media (min-width: 768px) {
+    .hero-img,
+    .hero-text {
+        min-height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-text p,
+    .comunita p {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+}

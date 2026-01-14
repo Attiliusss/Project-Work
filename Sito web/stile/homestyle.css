@@ -1,0 +1,281 @@
+/* ===== STRUTTURA BASE ===== */
+body {
+    font-family: Lato, sans-serif;     /* Tipo di scrittura */
+    margin: 0;
+    color: white;
+}
+
+/* Logo */
+.logo {
+    width: 150px;
+}
+
+/* Intro */
+.intro {
+    background-color: rgb(4, 67, 110);
+    color: white;
+}
+
+/* ===== MENU NAVIGAZIONE ===== */
+.navbar-nav .nav-link {
+    color: rgb(4, 67, 110);     /* Colore del testo dei link di navigazione */
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #1c83f2;     /* Colore al passaggio del mouse */
+    text-decoration: underline;     /* Testo sottolineato al passaggio del cursore */
+}
+
+.navbar-toggler {
+    color: rgb(4, 67, 110);     /* Colore del bordo del menu a tendina */
+}
+
+/* ===== SEZIONI ===== */
+
+/* Sezione 1 */
+#sezione1 {
+    background-image: url('../immagini/chisiamo.jpg');
+    justify-content: flex-start;     /* Allinea il contenuto a sinistra */
+    text-align: left;
+}
+
+/* Sezione 2 */
+#sezione2 {
+    background-image: url('../immagini/storia.jpg');
+    color:rgb(4, 67, 110);
+    justify-content: center;     /* Centra il contenuto */ 
+    text-align: center;
+}
+
+/* Sezione 3 */
+#sezione3 {
+    background-image: url('../immagini/pianeta.png');
+    justify-content: flex-end;     /* Allinea il contenuto a destra */
+    text-align: right;
+}
+
+/* Sezione 4 */
+#sezione4 {
+    background-image: url('../immagini/sostenibilita.jpg');
+    justify-content: center;
+    align-items: start;     /* Allinea il contenuto in alto */
+    text-align: center;
+}
+
+/* Contenuto delle sezioni */
+.sezioni-imgsfondo {
+    background-size: cover;
+    background-position: center;
+    min-height: 1010px;
+    color: white;
+    padding: 4rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Titoli e testi nelle sezioni */
+.sezioni-imgsfondo h2 {
+    font-family: Cinzel, serif;     /* Tipo di scrittura */
+    font-size: 2.5rem;     /* Dimensione titolo */
+    margin-bottom: 1rem;
+}
+
+.sezioni-imgsfondo h3 {
+    font-style: italic;     /* Stile di scrittura dei sottotitoli */
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+/* Bottoni delle sezioni */
+.pulsante-redirect {
+    background-color: rgb(4, 67, 110);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 25px;     /* Bordi arrotondati */
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.pulsante-redirect:hover {
+    background-color: blue;
+    text-decoration: underline;
+}
+
+.pulsante-redirect i {
+    margin-left: 0.5rem;
+    vertical-align: middle;     /* Allinea meglio con il testo */
+}
+
+/* ===== ANIMAZIONI SEZIONI ===== */
+.sezioni-imgsfondo {
+    opacity: 0;     /* Invisibile inizialmente */
+    transform: scale(1.05);     /* Leggero zoom-in */
+    transition: opacity 1.5s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.sezioni-imgsfondo.visible {
+    opacity: 1;     /* Visibile */
+    transform: scale(1);     /* Torna alla posizione originale */
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: white;
+    color: rgb(4, 67, 110);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* Contatti */
+footer p {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+/* Link contatti (telefono, email) */
+.link-contatti {
+    text-decoration: none;
+    color: rgb(4, 67, 110); 
+    transition: color 0.3s ease;
+    display: inline-flex;     /* Per allineare icona e testo */
+    align-items: center;
+}
+
+.link-contatti .contatti-text:hover {
+    text-decoration: underline;
+    color: rgb(62, 255, 14);     /* Verde solo al passaggio del mouse */
+}
+
+.link-contatti .contatti-text {
+    margin-left: 0.5rem;     /* Spazio tra icona e testo */
+}
+
+/* Icone social */
+.icone-social {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.icone-social a {
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.social-link i {
+    display: inline-block; 
+    line-height: 1;
+    font-size: 1.6rem;
+    color: rgb(4, 67, 110);
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-link i:hover {
+    color: #0d6efd;
+    transform: translateY(-3px);
+}
+
+/* Copyright */
+footer .copyright {
+    font-size: 0.95rem;
+    margin-top: 1rem;
+}
+
+/* ===== MEDIA QUERIES ===== */
+@media (max-width: 992px) {
+    .macro {
+        min-height: 60vh;
+        padding: 3rem 2rem;
+        background-position: center top;     /* Evita zoom e tagli */
+    }
+
+    #sezione1 {
+        text-align: left;
+        justify-content: flex-start;
+    }
+
+    #sezione3 {
+        text-align: right;
+        justify-content: flex-end;
+    }
+
+    .pulsante-redirect {
+        padding: 0.6rem 1.2rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .macro {
+        min-height: 50vh;
+        padding: 2rem 1.5rem;
+        background-position: top;
+    }
+
+    #sezione1 {
+        padding: 0;
+        text-align: left;
+        justify-content: flex-start;
+    }
+    
+     #sezione3 {
+        padding: 0;
+        text-align: right;
+        justify-content: flex-end;
+    }
+    
+    .intro i {
+        font-size: 5rem;
+    }
+    
+    .intro h1 {
+        font-size: 1.5rem;
+    }
+
+    .sezioni-imgsfondo h2 {
+        font-size: 1.5rem;
+    }
+
+    .sezioni-imgsfondo h3 {
+        font-size: 0.95rem;
+    }
+    
+    .pulsante-redirect {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .macro {
+        min-height: 45vh;
+        padding: 1rem;
+        background-position: top;
+    }
+
+    .sezioni-imgsfondo h2 {
+        font-size: 1.3rem;
+    }
+
+    .sezioni-imgsfondo h3 {
+        font-size: 0.85rem;
+    }
+    
+    .intro i {
+        font-size: 4rem;
+    }
+    
+    .intro h1 {
+        font-size: 1.2rem;
+    }
+
+    .pulsante-redirect {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+    }
+}

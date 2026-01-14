@@ -1,0 +1,269 @@
+/* ===== STRUTTURA BASE ===== */
+body {
+    font-family: 'Lato', sans-serif;     /* Stile scrittura */
+    margin: 0;
+    background-color: green;
+}
+
+/* Logo */
+.logo {
+    width: 150px;     /* Larghezza */
+    max-width: 100%;
+}
+
+/* ===== MENU NAVIGAZIONE ===== */
+.navbar-nav .nav-link {
+    color: green;     /* Colore del testo dei link di navigazione */
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #0d6efd;     /* Colore al passaggio del mouse */
+    text-decoration: underline;     /* Testo sottolineato */
+}
+
+.navbar-toggler {
+    color: green;     /* Colore del bordo del menu a tendina */
+}
+
+/* ===== INTRO CON IMMAGINE DI SFONDO ===== */
+.intro {
+    min-height: 100vh;
+    height: auto;
+    background-image: url('../immagini/intropianeta.avif');
+    background-size: cover;
+    background-position: center;
+    color: white; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.intro-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+}
+
+.intro-col {
+    flex: 1 1 300px;
+    margin: 10px;
+}
+
+/* ===== TIPOGRAFIA ===== */
+h2 {
+    font-family: 'Cinzel', serif;     /* Stile titolo */
+    font-size: 2rem;     /* Dimensione testo */
+    margin-bottom: 10px;
+    color: white;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+p strong {
+    font-style: italic;     /* Stile delle parole in grassetto */
+}
+
+.cialde {
+    background-color: white;
+    color: green;
+}
+
+.circolarita p {
+    color: white;
+}
+
+.circolarita li {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+
+/* ===== SEZIONI CON SFONDO ===== */
+.sezioni-imgsfondo {
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    color: white;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+}
+
+/* ===== SEZIONE ENERGIA ===== */
+.energia {
+    min-height: 100vh;
+    height: auto;
+    background-image: url("../immagini/energia.avif");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 40px 50px;
+}
+
+.energia-container {
+    text-align: right;
+    max-width: 400px;
+}
+
+/* ===== CARDS ===== */
+.card img {
+    height: 250px;
+    object-fit: cover;
+}
+
+.card h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: green;
+}
+
+.card p {
+    font-size: 1rem;
+    color: green;
+}
+
+/* ===== ANIMAZIONI FADE-IN ===== */
+.animazione-slide,
+.sezioni-imgsfondo {
+    opacity: 0;     /* Inizialmente nascosto */
+    transform: translateY(30px);     /* Parte un pò più in basso */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.animazione-slide.visible,
+.sezioni-imgsfondo.visible {
+    opacity: 1;     /* Diventa visibile */
+    transform: translateY(0);     /* Torna alla posizione originale */
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: white;
+    color: green;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+/* Contatti */
+.link-contatti {
+    text-decoration: none;
+    color: green; 
+    transition: color 0.3s ease;
+    display: inline-flex;     /* Per allineare icona e testo */
+    align-items: center;
+}
+
+.link-contatti .contatti-text {
+    margin-left: 0.5rem;     /* Spazio tra icona e testo */
+}
+
+.link-contatti .contatti-text:hover {
+    text-decoration: underline;     /* Sottolineato quando il cursore ci passa sopra */
+    color: #0d6efd;     /* Blu solo al passaggio del mouse */
+}
+
+/* Social */
+.icone-social {
+    margin: 1rem 0;
+}
+
+.icone-social a {
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.social-link i {
+    font-size: 1.6rem;
+    color: green;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-link i:hover {
+    color: #0d6efd;
+    transform: translateY(-3px);
+}
+
+/* Copyright */
+footer .copyright {
+    font-size: 0.95rem;
+    margin-top: 1rem;
+}
+
+
+/* ===== MEDIA QUERIES ===== */
+@media (max-width: 768px) {
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    li {
+        font-size: 1rem;
+    }
+
+    .intro {
+        padding: 60px 20px;
+    }
+
+    .intro-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .energia {
+        justify-content: center;
+        padding: 40px 20px;
+    }
+
+    .energia-container {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .card img {
+        height: 200px;
+    }
+}
+
+/* ===== SMARTPHONE PICCOLI ===== */
+@media (max-width: 480px) {
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    li {
+        font-size: 0.95rem;
+    }
+
+    footer p {
+        font-size: 1rem;
+    }
+
+    .social-link i {
+        font-size: 1.4rem;
+    }
+}
